@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<a href="{% url 'namespace_index' namespace %}">当前namespace为: {{ namespace }}</a>
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li><a href="{{ request.path }}{{ item.metadata.name }}/">{{ item.metadata.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>无内容</p>
+{% endif %}
+</body>
+</html>

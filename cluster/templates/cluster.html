@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>集群信息</title>
+</head>
+<body>
+    <ul>
+        <li><a href="{% url 'list_nodes' %}">节点列表</a></li>
+        <li><a href="{% url 'list_namespaces' %}">namespace 列表</a></li>
+        <li><a href="{% url 'list_pods' %}">pod 列表</a></li>
+        <li><a href="{% url 'list_pv' %}">pv 列表</a></li>
+        <li><a href="{% url 'list_events' %}">事件 列表</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资源信息</title>
+</head>
+<body>
+<a href="{% url 'namespace_index' namespace %}">当前namespace为: {{ namespace }}</a>
+    <ul>
+        <li><a href="{% url 'deployments' namespace %}">deployment 列表</a></li>
+        <li><a href="{% url 'statefulsets' namespace %}">statefulset 列表</a></li>
+        <li><a href="{% url 'configmaps' namespace %}">configmap 列表</a></li>
+        <li><a href="{% url 'secrets' namespace %}">secret 列表</a></li>
+        <li><a href="{% url 'pvcs' namespace %}">pvc 列表</a></li>
+        <li><a href="{% url 'ingresses' namespace %}">ingress 列表</a></li>
+        <li><a href="{% url 'daemonsets' namespace %}">daemonset 列表</a></li>
+        <li><a href="{% url 'replicasets' namespace %}">replicaset 列表</a></li>
+        <li><a href="{% url 'pods' namespace %}">pods 列表</a></li>
+        <li><a href="{% url 'events' namespace %}">events 列表</a></li>
+    </ul>
+</body>
+</html>

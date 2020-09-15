@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<a href="{% url 'cluster_index' %}">返回集群主页</a>
+{% if items %}
+    <ul>
+    {% for item in items %}
+        <li><a href="{{ request.path }}{{ item.metadata.name }}/">{{ item.metadata.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>无内容</p>
+{% endif %}
+</body>
+</html>
