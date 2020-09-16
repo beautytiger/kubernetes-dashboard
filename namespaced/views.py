@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
-from kubernetes import client, config
+from kubernetes import client
 
-config.load_kube_config()
 corev1 = client.CoreV1Api()
 appv1 = client.AppsV1Api()
 extv1 = client.ExtensionsV1beta1Api()

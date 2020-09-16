@@ -11,6 +11,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from kubernetes import config
+
+try:
+    config.load_incluster_config()
+except Exception:
+    config.load_kube_config()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +32,7 @@ SECRET_KEY = 'r)ytt=r-2upy6%s&bldxs0c)ytuq(bc+b3a3gi0e7mqple)$f2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition

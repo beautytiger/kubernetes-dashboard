@@ -1,0 +1,2 @@
+# kubernetes 资源展示看板
+主要用于展示kubernetes集群中的各种资源
